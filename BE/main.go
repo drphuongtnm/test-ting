@@ -11,9 +11,11 @@ import (
 func init() {
 	Initializers.LoadEnvironmentVariables()
 	Initializers.ConnectToDB()
+
 }
 
 func main() {
+	Initializers.CreateDummyData()
 	r := gin.Default()
 
 	// Define your Gin routes here
