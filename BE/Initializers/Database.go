@@ -108,7 +108,7 @@ func OutputViewModelData() {
 	}
 
 	// Convert response to JSON
-	jsonResponse, err := json.Marshal(response)
+	jsonResponse, err := json.MarshalIndent(response, "", "    ")
 	if err != nil {
 		log.Println("Error marshalling response to JSON:", err)
 		return
