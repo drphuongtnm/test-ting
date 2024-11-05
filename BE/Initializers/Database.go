@@ -90,7 +90,7 @@ func TransformDataToDTO() ([]*DTO.KolDTO, error) {
 	return kolDTOs, nil
 }
 func OutputViewModelData() {
-	kolDTOs, err := TransformDataToDTO() // Call the function to get the DTOs
+	kolDTOs, err := TransformDataToDTO()
 	if err != nil {
 		log.Println("Error transform data to DTO:", err)
 		return

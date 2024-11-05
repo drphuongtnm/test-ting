@@ -19,7 +19,7 @@ func CreateDummyData() {
 		log.Println("Error counting records in Kol table:", err)
 		return
 	}
-	// nếu không tồn tại dòng dự liệu nào, tạo data
+	// nếu không đủ dòng dự liệu, tạo data
 	if count < 25 {
 		rowsNeeded := 25 - count
 		dummyData := generateDummyData(int(rowsNeeded))
