@@ -22,6 +22,7 @@ func main() {
 
 	r := gin.Default()
 	//Mục đích là cho bên frontend có quyền truy cập vào api của backend
+	//Chạy lệnh go get github.com/gin-contrib/cors
 	r.Use(cors.New(cors.Config{
 		AllowOrigins:     []string{"http://localhost:3000"}, // Địa chỉ frontend
 		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE"},

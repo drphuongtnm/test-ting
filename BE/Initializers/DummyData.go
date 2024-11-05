@@ -20,16 +20,17 @@ func CreateDummyData() {
 		return
 	}
 	// nếu không tồn tại dòng dự liệu nào, tạo data
-	if count == 0 {
-		dummyData := generateDummyData(25) // Generate 25 rows of dummy data
+	if count < 25 {
+		rowsNeeded := 25 - count
+		dummyData := generateDummyData(int(rowsNeeded))
 
 		if err := DB.Create(&dummyData).Error; err != nil {
 			log.Println("Error inserting dummy data:", err)
 		} else {
-			log.Println("Dummy data inserted successfully.")
+			log.Printf("Inserted %d rows of dummy data to reach 25 total.\n", rowsNeeded)
 		}
 	} else {
-		log.Println("Kol table already have data. Skipping dummy data insertion.")
+		log.Println("Kol table already has 25 or more rows. Skipping dummy data insertion.")
 	}
 }
 func generateDummyData(num int) []Models.Kol {

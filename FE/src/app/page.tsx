@@ -44,8 +44,8 @@ const Page = () => {
 			<main className=' bg-[#31511E] w-full py-8'>
 				<div className='bg-[#F6FCDF] shadow-xl w-4/5 ml-auto mr-auto py-6 rounded-xl'>
 					<h1 className='text-center text-2xl font-bold py-8'>List of Kols</h1>
-					<div className="table-wrapper px-10">
-						<div className="table-scroll">
+					<div className="table-wrapper px-10 h-[500px]">
+						<div className="table-scroll center">
 							<KolList kols={Kols} />
 						</div>
 					</div>
